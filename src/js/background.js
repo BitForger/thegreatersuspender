@@ -1,4 +1,4 @@
-/* global gsStorage, gsChrome, gsIndexedDb, gsUtils, gsFavicon, gsSession, gsMessages, gsTabSuspendManager, gsTabDiscardManager, gsAnalytics, gsTabCheckManager, gsSuspendedTab, chrome, XMLHttpRequest */
+/* global gsStorage, gsChrome, gsIndexedDb, gsUtils, gsFavicon, gsSession, gsMessages, gsTabSuspendManager, gsTabDiscardManager,gsTabCheckManager, gsSuspendedTab, chrome, XMLHttpRequest */
 /*
  * The Great Suspender
  * Copyright (C) 2017 Dean Oemcke
@@ -56,7 +56,6 @@ var tgs = (function() {
       tgs,
       gsUtils,
       gsChrome,
-      gsAnalytics,
       gsStorage,
       gsIndexedDb,
       gsMessages,
@@ -1237,11 +1236,6 @@ var tgs = (function() {
 
         //show notice - set global notice field (so that it can be trigger to show later)
         _noticeToDisplay = resp;
-        gsAnalytics.reportEvent(
-          'Notice',
-          'Prep',
-          resp.target + ':' + resp.version
-        );
       }
     };
     xhr.send();
@@ -1761,11 +1755,6 @@ var tgs = (function() {
       var noticeToDisplay = requestNotice();
       if (noticeToDisplay) {
         chrome.tabs.create({ url: chrome.extension.getURL('notice.html') });
-        gsAnalytics.reportEvent(
-          'Notice',
-          'Display',
-          noticeToDisplay.target + ':' + noticeToDisplay.version
-        );
       }
     });
     chrome.windows.onRemoved.addListener(function(windowId) {
@@ -1827,7 +1816,6 @@ var tgs = (function() {
 
   function startAnalyticsUpdateJob() {
     window.setInterval(() => {
-      gsAnalytics.performPingReport();
       const reset = true;
       gsSession.updateSessionMetrics(reset);
     }, analyticsCheckInterval);
@@ -1890,7 +1878,6 @@ Promise.resolve()
   .then(() => {
     // initialise other gsLibs
     return Promise.all([
-      gsAnalytics.initAsPromised(),
       gsFavicon.initAsPromised(),
       gsTabSuspendManager.initAsPromised(),
       gsTabCheckManager.initAsPromised(),
@@ -1910,7 +1897,5 @@ Promise.resolve()
     gsUtils.error('background init error: ', error);
   })
   .finally(() => {
-    gsAnalytics.performStartupReport();
-    gsAnalytics.performVersionReport();
     tgs.startTimers();
   });
