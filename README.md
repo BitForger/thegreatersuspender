@@ -1,6 +1,6 @@
 # The Great (More Private) Suspender
 
-This is a fork and update of the now suspiciously managed extension. I'm stripping all analytics code out of it and making it available to anyone to build from source.
+:bangbang: _This is a fork and update of the now suspiciously managed extension. I'm stripping all analytics code out of it and making it available to anyone to build from source._ :bangbang:
 
 <img src="/src/img/suspendy-guy.png" width="100px" />
 
