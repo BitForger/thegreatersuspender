@@ -1,19 +1,19 @@
-# The Great Suspender
+# The Great (More Private) Suspender
+
+This is a fork and update of the now suspiciously managed extension. I'm stripping all analytics code out of it and making it available to anyone to build from source.
 
 <img src="/src/img/suspendy-guy.png" width="100px" />
 
 "The Great Suspender" is a free and open-source Google Chrome extension for people who find that chrome is consuming too much system resource or suffer from frequent chrome crashing. Once installed and enabled, this extension will automatically *suspend* tabs that have not been used for a while, freeing up memory and cpu that the tab was consuming.
 
-If you have suggestions or problems using the extension, please [submit a bug or a feature request](https://github.com/greatsuspender/thegreatsuspender/issues/). For other enquiries you can email me at greatsuspender@gmail.com.
+If you have suggestions or problems using the extension, please [submit a bug or a feature request](https://github.com/bitforger/thegreatsuspender/issues/). For other enquiries you can email me at greatsuspender@gmail.com.
 
 **If you have lost tabs from your browser:** I have written a guide for how to recover your lost tabs [here](https://github.com/deanoemcke/thegreatsuspender/issues/526
 ).
 
 ### Chrome Web Store
 
-The Great Suspender is [available via the official Chrome Web Store](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg).
-
-Please note that the webstore version may be behind the latest version here. That is because I try to keep webstore updates down to a minimum due to their [disruptive effect](https://github.com/greatsuspender/thegreatsuspender/issues/526).
+:bangbang: _**There is not a version currently publish on the chrome store**_ :bangbang:
 
 For more information on the permissions required for the extension, please refer to this gitHub issue: (https://github.com/greatsuspender/thegreatsuspender/issues/213)
 
@@ -86,7 +86,7 @@ Contributions are very welcome. Feel free to submit pull requests for new featur
 
 ### License
 
-This work is licensed under a GNU GENERAL PUBLIC LICENSE (v2)
+This fork is licensed under a GNU GENERAL PUBLIC LICENSE (v2)
 
 ### Shoutouts
 
