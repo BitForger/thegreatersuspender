@@ -34,10 +34,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0 \
-          sudo apt-add-repository https://cli.github.com/packages \
-          sudo apt update \
-          sudo apt install gh
+      - run: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+      - run: sudo apt-add-repository https://cli.github.com/packages
+      - run: sudo apt update
+      - run: sudo apt install gh
       - run: npm run generate-key
       - run: node ./bin/update-version.js do ${{ github.event.inputs.name }}
       - run: npm run build
