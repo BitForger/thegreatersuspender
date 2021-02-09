@@ -42,5 +42,5 @@ jobs:
       - run: npm run generate-key
       - run: node ./bin/update-version.js do ${{ github.event.inputs.version }}
       - run: npm run build
-      - run: gh auth login --with-token < ${{ secrets.GH_ACCESS_TOKEN }}
+      - run: echo ${{ secrets.GH_ACCESS_TOKEN }} | gh auth login --with-token
       - run: gh release create ${{ github.event.inputs.version }} './build/crx/tgs-${{ github.event.inputs.version }}.crx'
