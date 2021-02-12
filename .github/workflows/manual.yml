@@ -42,6 +42,8 @@ jobs:
       - run: npm run generate-key
       - run: node ./bin/update-version.js do ${{ github.event.inputs.version }}
       - run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "Repo Action"
           git add ./src/manifest.json
           git commit -m "chore: updating version to ${{ github.event.inputs.version }}"
       - run: npm run build
