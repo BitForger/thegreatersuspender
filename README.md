@@ -1,12 +1,12 @@
-# The Great (More Private) Suspender
+# The Greater (More Private) Suspender
 
 :bangbang: _This is a fork and update of the now suspiciously managed extension. I'm stripping all analytics code out of it and making it available to anyone to build from source._ :bangbang:
 
 <img src="/src/img/suspendy-guy.png" width="100px" />
 
-"The Great Suspender" is a free and open-source Google Chrome extension for people who find that chrome is consuming too much system resource or suffer from frequent chrome crashing. Once installed and enabled, this extension will automatically *suspend* tabs that have not been used for a while, freeing up memory and cpu that the tab was consuming.
+"The Greater Suspender" is a free and open-source Google Chrome extension for people who find that chrome is consuming too much system resource or suffer from frequent chrome crashing. Once installed and enabled, this extension will automatically *suspend* tabs that have not been used for a while, freeing up memory and cpu that the tab was consuming.
 
-If you have suggestions or problems using the extension, please [submit a bug or a feature request](https://github.com/bitforger/thegreatsuspender/issues/). For other enquiries you can email me at greatsuspender@gmail.com.
+If you have suggestions or problems using the extension, please [submit a bug or a feature request](https://github.com/bitforger/thegreatersuspender/issues/).
 
 **If you have lost tabs from your browser:** I have written a guide for how to recover your lost tabs [here](https://github.com/deanoemcke/thegreatsuspender/issues/526
 ).
@@ -19,7 +19,7 @@ For more information on the permissions required for the extension, please refer
 
 ### Install as an extension from source
 
-1. Download the **[latest available version](https://github.com/bitforger/thegreatsuspender/releases)** and unarchive to your preferred location (whichever suits you).
+1. Download the **[latest available version](https://github.com/bitforger/thegreatersuspender/releases)** and unarchive to your preferred location (whichever suits you).
 2. Using **Google Chrome** browser, navigate to chrome://extensions/ and enable "Developer mode" in the upper right corner.
 3. Click on the <kbd>Load unpacked extension...</kbd> button.
 4. Browse to the src directory of the unarchived folder and confirm.
@@ -44,7 +44,9 @@ It should say:
 Done, without errors.
 ```
 
-The extension in crx format will be inside the build/crx/ directory. You can drag it into [extensions] (chrome://extensions) to install locally.
+~~The extension in crx format will be inside the build/crx/ directory. You can drag it into [extensions] (chrome://extensions) to install locally.~~
+As of Chrome 70(ish, I don't remember the exact version) you can no longer side load extensions from third party locations. You can load unpacked from source or install
+via the Chrome Web Store.
 
 ### Integrating with another Chrome extension or app
 
