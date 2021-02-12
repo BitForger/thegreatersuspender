@@ -41,9 +41,9 @@ jobs:
       - run: npm install
       - run: npm run generate-key
       - run: node ./bin/update-version.js do ${{ github.event.inputs.version }}
-      - run:
-        - git add ./src/manifest.json 
-        - git commit -m "chore: updating version to ${{ github.event.inputs.version }}"
+      - run: |
+          git add ./src/manifest.json
+          git commit -m "chore: updating version to ${{ github.event.inputs.version }}"
       - run: npm run build
       - run: echo ${{ secrets.GH_ACCESS_TOKEN }} | gh auth login --with-token
       - run: gh release create ${{ github.event.inputs.version }}
