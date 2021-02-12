@@ -19,7 +19,7 @@ For more information on the permissions required for the extension, please refer
 
 ### Install as an extension from source
 
-1. Download the **[latest available version](https://github.com/greatsuspender/thegreatsuspender/releases)** and unarchive to your preferred location (whichever suits you).
+1. Download the **[latest available version](https://github.com/bitforger/thegreatsuspender/releases)** and unarchive to your preferred location (whichever suits you).
 2. Using **Google Chrome** browser, navigate to chrome://extensions/ and enable "Developer mode" in the upper right corner.
 3. Click on the <kbd>Load unpacked extension...</kbd> button.
 4. Browse to the src directory of the unarchived folder and confirm.
