@@ -50,7 +50,7 @@
   "web_accessible_resources": ["suspended.html"],
   "content_security_policy": "script-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self' https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts; img-src 'self' data: chrome: ; style-src 'self'; default-src 'self'",
   "incognito": "split",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "minimum_chrome_version": "55",
 
   "commands": {
