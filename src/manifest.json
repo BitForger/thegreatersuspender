@@ -105,8 +105,5 @@
     "6-unsuspend-all-windows": {
       "description": "__MSG_ext_cmd_unsuspend_all_windows_description__"
     }
-  },
-  "_version": "",
-  "sap.app": {},
-  "sap.ui": {}
+  }
 }

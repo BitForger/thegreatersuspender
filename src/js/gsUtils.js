@@ -132,20 +132,19 @@ var gsUtils = {
   //tests for non-standard web pages. does not check for suspended pages!
   isSpecialTab: function(tab) {
     const url = tab.url || tab.pendingUrl;
+    if (!url) {
+      console.error('Unable to obtain url for tab!', {url});
+    }
     if (gsUtils.isSuspendedTab(tab, true)) {
       return false;
     }
     // Careful, suspended urls start with "chrome-extension://"
-    if (
-      url.indexOf('about') === 0 ||
-      url.indexOf('chrome') === 0 ||
-      // webstore urls no longer seem to crash the extension :D
-      // url.indexOf('chrome.google.com/webstore') >= 0 ||
-      gsUtils.isBlockedFileTab(tab)
-    ) {
-      return true;
-    }
-    return false;
+    return url.indexOf('about') === 0 ||
+        url.indexOf('chrome') === 0 ||
+        // webstore urls no longer seem to crash the extension :D
+        // url.indexOf('chrome.google.com/webstore') >= 0 ||
+        gsUtils.isBlockedFileTab(tab);
+
   },
 
   isFileTab: function(tab) {
